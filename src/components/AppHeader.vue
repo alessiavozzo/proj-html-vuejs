@@ -6,19 +6,45 @@ export default {
     name: "AppHeader",
     data() {
         return {
-            /* navLinks: navLinks,
-            navIcons: navIcons */
+            bgImages: [
+                "h5-slide-1-background.jpg",
+                "h5-slide-2-background.jpg",
+                "h5-slide-3-background.jpg",
+            ],
+            counter: 0
         }
     },
     props: {
         navLinks: Array,
         navIcons: Array
+    },
+    methods: {
+        next() {
+            this.counter++
+            if (this.counter > this.bgImages.length - 1) {
+                this.counter = 0
+            }
+        },
+        prev() {
+            this.counter--
+            if (this.counter < 0) {
+                this.counter = this.bgImages.length - 1
+            }
+        }
     }
 }
 </script>
 
 <template>
-    <header id="site_header">
+    <header id="site_header" :style="{ 'background-image': `url('/img/${bgImages[counter]}')` }">
+        <div class="controls d-flex">
+            <button type="button" class="prev-btn" @click="prev()">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button type="button" class="next-btn" @click="next()">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
 
         <div class="container">
 
@@ -68,7 +94,7 @@ export default {
 
 <style scoped>
 #site_header {
-    background-image: url(/img/h5-slide-3-background.jpg);
+    /* background-image: url(/img/h5-slide-3-background.jpg); */
     height: 680px;
     background-size: cover;
     background-position: center;
@@ -113,6 +139,23 @@ export default {
         .btn {
             color: var(--academy-lighter);
             background-color: var(--academy-primary);
+        }
+    }
+
+    .controls {
+        width: 100%;
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        padding: 0 5rem;
+
+        .next-btn,
+        .prev-btn {
+            font-size: 3rem;
+            border: none;
+            background-color: transparent;
+            color: var(--academy-lighter);
+            font-size: 5rem;
         }
     }
 }

@@ -39,8 +39,12 @@ export default {
             </div>
         </div>
         <div class="controls d-flex">
-            <button class="prev-btn" @click="prev()">-</button>
-            <button class="prev-btn" @click="next()">+</button>
+            <button type="button" class="prev-btn" @click="prev()">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button type="button" class="prev-btn" @click="next()">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
         </div>
 
     </section>
@@ -73,7 +77,7 @@ export default {
     }
 
     .controls {
-        width: 80%;
+        width: 90%;
         justify-content: space-between;
         position: absolute;
 
@@ -81,6 +85,9 @@ export default {
         .prev-btn {
             font-size: 3rem;
             border: none;
+            background-color: transparent;
+            color: var(--academy-lighter);
+            font-size: 5rem;
         }
     }
 }
