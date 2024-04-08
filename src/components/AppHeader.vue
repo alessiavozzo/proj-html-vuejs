@@ -1,14 +1,18 @@
 <script>
-import { navLinks } from '../assets/js/links-icons';
-import { navIcons } from '../assets/js/links-icons';
+/* import { navLinks } from '../assets/js/links-icons';
+import { navIcons } from '../assets/js/links-icons'; */
 
 export default {
     name: "AppHeader",
     data() {
         return {
-            navLinks: navLinks,
-            navIcons: navIcons
+            /* navLinks: navLinks,
+            navIcons: navIcons */
         }
+    },
+    props: {
+        navLinks: Array,
+        navIcons: Array
     }
 }
 </script>
