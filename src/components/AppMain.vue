@@ -2,13 +2,15 @@
 import SubjectsSection from './SubjectsSection.vue';
 import TutoringSection from './TutoringSection.vue';
 import EmpoweringSection from './EmpoweringSection.vue';
+import TestimonialsSection from './TestimonialsSection.vue';
 
 export default {
     name: "AppMain",
     components: {
         SubjectsSection,
         TutoringSection,
-        EmpoweringSection
+        EmpoweringSection,
+        TestimonialsSection
     },
     data() {
         return {
@@ -28,6 +30,9 @@ export default {
 
         <!-- empowering section -->
         <EmpoweringSection />
+
+        <!-- Testimonials section -->
+        <TestimonialsSection />
 
     </main>
 </template>
