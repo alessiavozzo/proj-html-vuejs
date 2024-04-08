@@ -1,0 +1,30 @@
+/* #region reset */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/* #region common */
+.container {
+    width: 95%;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* #region utilities */
+.d-flex {
+    display: flex;
+}
+
+.list-inline {
+    list-style: none;
+    display: flex;
+}
