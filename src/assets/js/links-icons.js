@@ -41,3 +41,12 @@ export const navIcons = [
     }
 
 ]
+
+export const options = [
+    "What We Do",
+    "Degree Programme",
+    "Career Achievements",
+    "Personal Management",
+    "Steps To Success",
+    "Knowledge Transfer",
+]

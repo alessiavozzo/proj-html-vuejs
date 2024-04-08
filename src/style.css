@@ -49,6 +49,10 @@ a {
     display: flex;
 }
 
+.col-8 {
+    width: calc((100% / 12) * 8 - 1rem);
+}
+
 .col-6 {
     width: calc((100% / 12) * 6 - 1rem);
 }
