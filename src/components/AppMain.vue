@@ -1,11 +1,14 @@
 <script>
-import { subjects } from '../assets/js/subjects';
+import SubjectsSection from './SubjectsSection.vue';
+
 export default {
     name: "AppMain",
+    components: {
+        SubjectsSection,
+    },
     data() {
         return {
-            subjects: subjects,
-            imageUrl: "/img/h5-custom-icon-"
+
         }
     }
 }
@@ -13,34 +16,11 @@ export default {
 
 <template>
     <main id="site_main">
-
-        <section id="subjects">
-            <div class="container">
-                <div class="row">
-                    <div class="card d-flex col-2" v-for="subject in subjects">
-                        <img :src="`${imageUrl}${subject.image}`" alt="subject-icon">
-                        <h3>{{ subject.name }}</h3>
-                    </div>
-
-                </div>
-            </div>
-        </section>
+        <!-- subjects section: subject cards -->
+        <SubjectsSection />
 
     </main>
 </template>
 
 
-<style scoped>
-#subjects {
-    padding: 3rem 0;
-
-    .card {
-        border: 1px solid var(--subject-border);
-        padding: 2rem 1rem;
-        align-items: center;
-        flex-direction: column;
-        gap: 1.5rem;
-        background-color: var(--academy-subject);
-    }
-}
-</style>
+<style scoped></style>
