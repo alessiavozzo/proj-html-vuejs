@@ -1,9 +1,13 @@
 <script>
+import { navLinks } from '../assets/js/links-icons';
+import { navIcons } from '../assets/js/links-icons';
+
 export default {
     name: "AppHeader",
     data() {
         return {
-
+            navLinks: navLinks,
+            navIcons: navIcons
         }
     }
 }
@@ -16,45 +20,27 @@ export default {
 
             <!-- top header with logo + nav-links -->
             <nav class="top-header d-flex">
-                <!-- left -->
+
+                <!-- left: logo -->
                 <div class="logo">
                     <img src="/img/logo-light.png" alt="iAcademy-logo-white">
                 </div>
-                <!-- center -->
+                <!-- center : links -->
                 <div class="nav-links">
                     <ul class="list-inline">
-                        <li>
-                            <a href="#">Home</a>
+                        <li v-for="navLink in navLinks">
+                            <a :href="navLink.href">{{ navLink.link }}</a>
                         </li>
-                        <li>
-                            <a href="#">Courses</a>
-                        </li>
-                        <li>
-                            <a href="#">Instructors</a>
-                        </li>
-                        <li>
-                            <a href="#">Events</a>
-                        </li>
-                        <li>
-                            <a href="#">Pages</a>
-                        </li>
-                        <li>
-                            <a href="#">Elements</a>
-                        </li>
-
                     </ul>
                 </div>
-                <!-- right -->
+
+                <!-- right: icons -->
                 <div class="nav-icons">
                     <ul class="list-inline">
-                        <li>
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-bag-shopping"></i>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-bars"></i>
+                        <li v-for="icon in navIcons">
+                            <a :href="icon.href">
+                                <i :class="icon.iconClass"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -62,8 +48,11 @@ export default {
             </nav>
 
             <!-- jumbotron -->
-            <div class="bottom-jumbo">
-
+            <div class="bottom-jumbo d-flex">
+                <h1>Contemporary Ideas</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit cumque dignissimos qui quasi
+                    praesentium a, maxime neque adipisci perspiciatis recusandae?</p>
+                <a href="#" class="btn">Register now</a>
             </div>
 
         </div>
@@ -79,19 +68,48 @@ export default {
     height: 680px;
     background-size: cover;
     background-position: center;
+    position: relative;
 
     nav {
-        height: 100px;
+        padding: 1.5rem 0;
         justify-content: space-between;
+        align-items: center;
 
         img {
             height: 30px;
         }
 
         ul {
-            gap: 1rem;
+            gap: 2rem;
+
+            a {
+                text-transform: uppercase;
+                color: var(--academy-lighter)
+            }
         }
 
+    }
+
+    .bottom-jumbo {
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 70%;
+        gap: 1.5rem;
+        color: var(--academy-lighter);
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        .btn {
+            color: var(--academy-lighter);
+            background-color: var(--academy-primary);
+        }
     }
 }
 </style>

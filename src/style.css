@@ -5,17 +5,29 @@
     margin: 0;
 }
 
+/* #region color-palette */
+:root {
+    --academy-lighter: #FFFFFF;
+    --academy-darker: #000000;
+    --academy-primary: #40C4FF;
+
+}
+
 
 
 /* #region common */
 .container {
     width: 95%;
     margin: 0 auto;
-    padding: 1.5rem 0;
 }
 
 a {
     text-decoration: none;
+}
+
+.btn {
+    text-transform: uppercase;
+    padding: 1rem;
 }
 
 
