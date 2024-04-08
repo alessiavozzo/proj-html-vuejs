@@ -8,6 +8,8 @@ export default {
 <template>
     <section id="tutoring">
         <div class="container">
+
+            <!-- text -->
             <div class="text d-flex">
                 <h2>The Trusted Name for In-Home Tutoring.</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis fugit fugiat voluptatem eum cum
@@ -15,6 +17,8 @@ export default {
                     eius at optio quibusdam officia consequatur. Consequatur ipsam sequi veniam!</p>
                 <a href="#">Learn more</a>
             </div>
+
+            <!-- img -->
             <div class="image">
                 <img src="/img/h5-img-1.jpg" alt="students-looking-up">
             </div>
@@ -44,6 +48,10 @@ export default {
             text-transform: uppercase;
             color: var(--academy-primary);
         }
+    }
+
+    .image {
+        text-align: center;
     }
 }
 </style>
