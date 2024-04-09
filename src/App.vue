@@ -1,8 +1,7 @@
 <script>
 import { navLinks } from './assets/js/links-icons';
-import { navIcons } from './assets/js/links-icons';
 import { footerCols } from './assets/js/links-icons';
-import { socialIcons } from './assets/js/links-icons';
+import { icons } from './assets/js/links-icons';
 
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
@@ -12,10 +11,9 @@ export default {
     name: "App",
     data() {
         return {
-            navIcons: navIcons,
             navLinks: navLinks,
             footerCols: footerCols,
-            socialIcons: socialIcons
+            icons: icons
         }
     },
     components: {
@@ -27,9 +25,9 @@ export default {
 </script>
 
 <template>
-    <AppHeader :navLinks="navLinks" :navIcons="navIcons" />
+    <AppHeader :navLinks="navLinks" :icons="icons" />
     <AppMain />
-    <AppFooter :footerCols="footerCols" :socialIcons="socialIcons" />
+    <AppFooter :footerCols="footerCols" :icons="icons" />
 </template>
 
 <style scoped></style>

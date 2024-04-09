@@ -15,7 +15,7 @@ export default {
     },
     props: {
         navLinks: Array,
-        navIcons: Array
+        icons: Object
     },
     methods: {
         next() {
@@ -66,7 +66,7 @@ export default {
                 <!-- right: icons -->
                 <div class="nav-icons">
                     <ul class="list-inline">
-                        <li v-for="icon in navIcons">
+                        <li v-for="icon in icons.navIcons">
                             <a :href="icon.href"
                                 :style="{ 'position': icon.iconClass.includes('fa-bag-shopping') ? 'relative' : 'static' }">
                                 <i :class="icon.iconClass"></i>

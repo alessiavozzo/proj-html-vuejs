@@ -4,7 +4,7 @@ export default {
     name: "AppFooter",
     props: {
         footerCols: Array,
-        socialIcons: Array
+        icons: Object
     }
 }
 </script>
@@ -54,7 +54,7 @@ export default {
                     <div class="call">CALL +44 300 303 0266</div>
                     <div class="follow">FOLLOW US</div>
                     <div class="social-links d-flex">
-                        <a v-for="icon in socialIcons" :href="icon.href">
+                        <a v-for="icon in icons.socialIcons" :href="icon.href">
                             <i :class="icon.iconClass"></i>
                         </a>
                     </div>

@@ -26,21 +26,37 @@ export const navLinks = [
 
 ];
 
-export const navIcons = [
-    {
-        href: "#",
-        iconClass: "fa-solid fa-magnifying-glass"
-    },
-    {
-        href: "#",
-        iconClass: "fa-solid fa-bag-shopping"
-    },
-    {
-        href: "#",
-        iconClass: "fa-solid fa-bars"
-    }
+export const icons = {
+    navIcons: [
+        {
+            href: "#",
+            iconClass: "fa-solid fa-magnifying-glass"
+        },
+        {
+            href: "#",
+            iconClass: "fa-solid fa-bag-shopping"
+        },
+        {
+            href: "#",
+            iconClass: "fa-solid fa-bars"
+        }
+    ],
 
-]
+    socialIcons: [
+        {
+            href: "#",
+            iconClass: "fa-brands fa-twitter"
+        },
+        {
+            href: "#",
+            iconClass: "fa-brands fa-instagram"
+        },
+        {
+            href: "#",
+            iconClass: "fa-brands fa-facebook"
+        }
+    ]
+}
 
 export const options = [
     "What We Do",
@@ -110,17 +126,3 @@ export const footerCols = [
 
 ]
 
-export const socialIcons = [
-    {
-        href: "#",
-        iconClass: "fa-brands fa-twitter"
-    },
-    {
-        href: "#",
-        iconClass: "fa-brands fa-instagram"
-    },
-    {
-        href: "#",
-        iconClass: "fa-brands fa-facebook"
-    }
-]
