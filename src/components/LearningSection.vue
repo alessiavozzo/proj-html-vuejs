@@ -59,6 +59,7 @@ export default {
 <style scoped>
 #learning {
     padding: 3rem 0;
+    border-bottom: 1px solid var(--subject-border);
 
     .options {
         ul {

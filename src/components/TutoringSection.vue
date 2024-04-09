@@ -50,8 +50,8 @@ export default {
         }
     }
 
-    .image {
-        text-align: center;
+    img {
+        width: 100%;
     }
 }
 </style>
