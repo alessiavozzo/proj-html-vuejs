@@ -11,7 +11,8 @@ export default {
                 "h5-slide-2-background.jpg",
                 "h5-slide-3-background.jpg",
             ],
-            counter: 0
+            counter: 0,
+            cartItems: 0
         }
     },
     props: {
@@ -68,8 +69,11 @@ export default {
                 <div class="nav-icons">
                     <ul class="list-inline">
                         <li v-for="icon in navIcons">
-                            <a :href="icon.href">
+                            <a :href="icon.href"
+                                :style="{ 'position': icon.iconClass.includes('fa-bag-shopping') ? 'relative' : 'static' }">
                                 <i :class="icon.iconClass"></i>
+                                <span class="cart-items" v-if="icon.iconClass.includes('fa-bag-shopping')">{{ cartItems
+                                    }}</span>
                             </a>
                         </li>
                     </ul>
@@ -85,6 +89,11 @@ export default {
                 <a href="#" class="btn">Register now</a>
             </div>
 
+            <div class="thumbnail">
+                <i class="fa-solid fa-circle" v-for="(thumb, index) in bgImages.length" @click="counter = index"
+                    :class="{ 'active': index === counter }"></i>
+            </div>
+
         </div>
 
 
@@ -93,12 +102,27 @@ export default {
 
 
 <style scoped>
+.cart-items {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    font-size: 0.9rem;
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--academy-primary);
+}
+
 #site_header {
     /* background-image: url(/img/h5-slide-3-background.jpg); */
     height: 680px;
     background-size: cover;
     background-position: center;
     position: relative;
+    font-size: 1.1rem;
 
     nav {
         padding: 1.5rem 0;
@@ -110,12 +134,18 @@ export default {
         }
 
         ul {
-            gap: 2rem;
-
             a {
                 text-transform: uppercase;
                 color: var(--academy-lighter)
             }
+        }
+
+        .nav-links ul {
+            gap: 2.5rem;
+        }
+
+        .nav-icons ul {
+            gap: 2rem;
         }
 
     }
@@ -129,16 +159,23 @@ export default {
         transform: translate(-50%, -50%);
         text-align: center;
         width: 70%;
-        gap: 1.5rem;
+        gap: 1rem;
         color: var(--academy-lighter);
 
         h1 {
-            font-size: 3rem;
+            font-size: 5rem;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 1.2rem;
+            padding-bottom: 1.5rem;
         }
 
         .btn {
             color: var(--academy-lighter);
             background-color: var(--academy-primary);
+            padding: 1rem 2rem;
         }
     }
 
@@ -147,15 +184,33 @@ export default {
         justify-content: space-between;
         position: absolute;
         top: 50%;
-        padding: 0 5rem;
+        padding: 0 3rem;
 
         .next-btn,
         .prev-btn {
             font-size: 3rem;
             border: none;
             background-color: transparent;
-            color: var(--academy-lighter);
+            color: var(--fade-light);
             font-size: 5rem;
+        }
+    }
+
+    .thumbnail {
+        position: absolute;
+        width: 100%;
+        bottom: 1.5rem;
+        left: 0;
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+
+        i {
+            color: var(--fade-light);
+
+            &.active {
+                color: var(--academy-lighter);
+            }
         }
     }
 }

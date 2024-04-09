@@ -15,11 +15,17 @@
     --academy-footer: #222222;
     --footer-text: #B9B9B9;
     --academy-warning: #FFD740;
+    --fade-light: #FFFFFF80;
 }
 
 
 
 /* #region common */
+
+body {
+    font-family: "Rasa", sans-serif;
+}
+
 .container {
     width: 95%;
     margin: 0 auto;
