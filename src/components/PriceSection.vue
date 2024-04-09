@@ -8,7 +8,15 @@ export default {
         return {
             pricePlansData: pricePlansData
         }
+    },
+    methods: {
+        //had to modify price-plans.js
+        //replace the blank space in plansOptions elements with '_' (to get plan data in position option-name)
+        getRowData(plan, option) {
+            return plan[option.toLowerCase().replace(/\s/g, '_')]
+        }
     }
+
 
 
 }
@@ -37,7 +45,7 @@ export default {
                     <tr v-for="option in pricePlansData.plansOptions" :key="option">
                         <th>{{ option }}</th>
                         <td v-for="plan in pricePlansData.pricePlans">
-                            {{ plan[option.toLowerCase().replace(/\s/g, '_')] }}
+                            {{ getRowData(plan, option) }}
                         </td>
                     </tr>
                 </tbody>

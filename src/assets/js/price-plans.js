@@ -3,7 +3,7 @@ export const pricePlansData = {
         "Number of courses",
         "Time",
         "Web Designing",
-        "Human-centered Design",
+        "Human Centered Design",
         "Basic Marketing",
         "Python for Everybody",
         "Android Developer",
