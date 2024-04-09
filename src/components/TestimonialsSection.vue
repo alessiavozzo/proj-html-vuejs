@@ -5,6 +5,7 @@ export default {
     name: "TestimonialsSection",
     data() {
         return {
+            imgPath: "/img/testimonials-standard-",
             testimonials: testimonials,
             currentTestimonial: 0
         }
@@ -32,7 +33,7 @@ export default {
     <section id="testimonials" class="d-flex">
         <div class="testimonial" v-for="(testimonial, testimonialIndex) in testimonials">
             <div class="testimonial-info d-flex" v-if="currentTestimonial === testimonialIndex">
-                <img :src="`/img/testimonials-standard-${testimonial.image}`" alt="">
+                <img :src="`${imgPath}${testimonial.image}`" alt="">
                 <div class="feed">{{ testimonial.feed }}</div>
                 <div class="name">{{ testimonial.name }}</div>
                 <div class="job">{{ testimonial.job }}</div>
@@ -46,6 +47,10 @@ export default {
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
         </div>
+        <div class="thumbnail">
+            <i class="fa-solid fa-circle" v-for="(thumb, index) in testimonials.length"
+                @click="currentTestimonial = index" :class="{ 'active': index === currentTestimonial }"></i>
+        </div>
 
     </section>
 
@@ -55,7 +60,7 @@ export default {
 <style scoped>
 #testimonials {
     background-image: url(/img/h5-parallax-img-1.png);
-    height: 680px;
+    height: 650px;
     background-size: cover;
     background-position: center;
     flex-direction: column;
@@ -68,6 +73,10 @@ export default {
         width: 70%;
         text-align: center;
         color: var(--academy-lighter);
+
+        .feed {
+            padding: 1rem 0;
+        }
 
         .testimonial-info {
             flex-direction: column;
@@ -86,8 +95,26 @@ export default {
             font-size: 3rem;
             border: none;
             background-color: transparent;
-            color: var(--academy-lighter);
+            color: var(--fade-light);
             font-size: 5rem;
+        }
+    }
+
+    .thumbnail {
+        position: absolute;
+        width: 100%;
+        bottom: 6rem;
+        left: 0;
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+
+        i {
+            color: var(--fade-light);
+
+            &.active {
+                color: var(--academy-lighter);
+            }
         }
     }
 }
