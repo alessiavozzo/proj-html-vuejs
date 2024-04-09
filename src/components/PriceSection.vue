@@ -84,6 +84,7 @@ export default {
 #prices {
     background-image: url(/img/page-background-img.png);
     padding: 4rem 0;
+    border-bottom: 1px solid var(--subject-border);
 
     th,
     td {

@@ -6,6 +6,7 @@ import TestimonialsSection from './TestimonialsSection.vue';
 import LearningSection from './LearningSection.vue';
 import CoursesSection from './CoursesSection.vue';
 import PriceSection from './PriceSection.vue';
+import ClientsSection from './ClientsSection.vue';
 
 export default {
     name: "AppMain",
@@ -16,7 +17,8 @@ export default {
         TestimonialsSection,
         LearningSection,
         CoursesSection,
-        PriceSection
+        PriceSection,
+        ClientsSection
     },
     data() {
         return {
@@ -48,6 +50,9 @@ export default {
 
         <!-- Price table section -->
         <PriceSection />
+
+        <!-- Clients Section -->
+        <ClientsSection />
 
     </main>
 </template>
