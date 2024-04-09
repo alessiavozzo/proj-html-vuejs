@@ -1,6 +1,23 @@
 <script>
+import SectionStructure from './SectionStructure.vue'
 export default {
-    name: "TutoringSection"
+    name: "TutoringSection",
+    components: {
+        SectionStructure
+    },
+    data() {
+        return {
+            sectionData: {
+                title: "The Trusted Name for In-Home Tutoring.",
+                paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis fugit fugiat voluptatem eum cum minus similique ex natus distinctio est in maxime ipsa dolores ratione quas quis vero.",
+                imagePath: "h5-img-1.jpg",
+                link: {
+                    href: "#",
+                    name: "Learn more"
+                }
+            }
+        }
+    }
 }
 </script>
 
@@ -9,49 +26,17 @@ export default {
     <section id="tutoring">
         <div class="container">
 
-            <!-- text -->
-            <div class="text d-flex">
-                <h2>The Trusted Name for In-Home Tutoring.</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis fugit fugiat voluptatem eum cum
-                    minus similique ex natus distinctio est in maxime ipsa dolores ratione quas quis vero, sint quia
-                    eius at optio quibusdam officia consequatur. Consequatur ipsam sequi veniam!</p>
-                <a href="#">Learn more</a>
-            </div>
 
-            <!-- img -->
-            <div class="image">
-                <img src="/img/h5-img-1.jpg" alt="students-looking-up">
-            </div>
+            <SectionStructure :title="sectionData.title" :description="sectionData.paragraph"
+                :image="sectionData.imagePath" :link="sectionData.link" />
 
         </div>
     </section>
 
 </template>
 
-
 <style scoped>
 #tutoring {
     padding: 1rem 0;
-
-    .text {
-        flex-direction: column;
-        gap: 1rem;
-        padding-bottom: 2rem;
-
-        h2 {
-            width: 50%;
-            font-size: 2.5rem;
-        }
-
-        a {
-            font-weight: bold;
-            text-transform: uppercase;
-            color: var(--academy-primary);
-        }
-    }
-
-    img {
-        width: 100%;
-    }
 }
 </style>

@@ -1,11 +1,9 @@
 <script>
-/* import { navLinks } from '../assets/js/links-icons';
-import { navIcons } from '../assets/js/links-icons'; */
-
 export default {
     name: "AppHeader",
     data() {
         return {
+            imgPath: "/img/",
             bgImages: [
                 "h5-slide-1-background.jpg",
                 "h5-slide-2-background.jpg",
@@ -37,7 +35,7 @@ export default {
 </script>
 
 <template>
-    <header id="site_header" :style="{ 'background-image': `url('/img/${bgImages[counter]}')` }">
+    <header id="site_header" :style="{ 'background-image': `url('${imgPath}${bgImages[counter]}')` }">
         <div class="controls d-flex">
             <button type="button" class="prev-btn" @click="prev()">
                 <i class="fa-solid fa-chevron-left"></i>
@@ -102,27 +100,12 @@ export default {
 
 
 <style scoped>
-.cart-items {
-    position: absolute;
-    top: -0.5rem;
-    right: -0.5rem;
-    font-size: 0.9rem;
-    border-radius: 50%;
-    height: 1rem;
-    width: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--academy-primary);
-}
-
 #site_header {
     /* background-image: url(/img/h5-slide-3-background.jpg); */
     height: 680px;
     background-size: cover;
     background-position: center;
     position: relative;
-    font-size: 1.1rem;
 
     nav {
         padding: 1.5rem 0;
@@ -148,6 +131,20 @@ export default {
             gap: 2rem;
         }
 
+    }
+
+    .cart-items {
+        position: absolute;
+        top: -0.5rem;
+        right: -0.5rem;
+        font-size: 0.9rem;
+        border-radius: 50%;
+        height: 1rem;
+        width: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--academy-primary);
     }
 
     .bottom-jumbo {

@@ -29,7 +29,7 @@ export default {
 
 <style scoped>
 #subjects {
-    padding: 3rem 0;
+    padding: 3.5rem 0;
 
     .card {
         border: 1px solid var(--subject-border);
