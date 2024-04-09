@@ -58,15 +58,6 @@ export const icons = {
     ]
 }
 
-export const options = [
-    "What We Do",
-    "Degree Programme",
-    "Career Achievements",
-    "Personal Management",
-    "Steps To Success",
-    "Knowledge Transfer",
-]
-
 export const footerCols = [
     {
         logo: "footer-logo-1.png",

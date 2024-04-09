@@ -38,7 +38,7 @@ export default {
 
     <!-- img -->
     <div class="image" :class="{ 'col-6': !link }" :style="{ 'order': !link ? '-1' : '1' }">
-        <img :src="`/img/${image}`" alt="students-looking-up">
+        <img :src="`/img/${image}`" :alt="title">
     </div>
 </template>
 

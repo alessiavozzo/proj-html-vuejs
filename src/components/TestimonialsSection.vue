@@ -33,7 +33,7 @@ export default {
     <section id="testimonials" class="d-flex">
         <div class="testimonial" v-for="(testimonial, testimonialIndex) in testimonials">
             <div class="testimonial-info d-flex" v-if="currentTestimonial === testimonialIndex">
-                <img :src="`${imgPath}${testimonial.image}`" alt="">
+                <img :src="`${imgPath}${testimonial.image}`" :alt="testimonial.name + ' pic'">
                 <div class="feed">{{ testimonial.feed }}</div>
                 <div class="name">{{ testimonial.name }}</div>
                 <div class="job">{{ testimonial.job }}</div>

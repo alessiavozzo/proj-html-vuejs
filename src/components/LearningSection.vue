@@ -1,12 +1,15 @@
 <script>
-import { options } from '../assets/js/links-icons';
+import { options } from '../assets/js/details';
+import { detailsList } from '../assets/js/details';
 
 export default {
     name: "LearningSection",
     data() {
         return {
             options: options,
-            currentClick: null
+            detailsList: detailsList,
+            imgPath: "/img/",
+            currentClick: 0
         }
     },
 
@@ -32,20 +35,12 @@ export default {
                 </div>
 
                 <div class="possibilities d-flex col-8">
-                    <h2>Learning Possibilities</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor consequatur
-                        in cumque aut a alias?
-                        At corporis sunt deleniti maiores quia voluptatem similique cupiditate sed pariatur a, assumenda
-                        cum
-                        asperiores labore in, earum amet molestias aliquid, delectus ullam tempora provident.
-                    </p>
+                    <h2>{{ detailsList[currentClick].title }}</h2>
+                    <p>{{ detailsList[currentClick].description }}</p>
                     <ul>
-                        <li>Lorem ipsum dolor sit amet consectetur.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li v-for="check in detailsList[currentClick].checklist">{{ check }}</li>
                     </ul>
-                    <img src="/img/h12-tabs-icon-1.png" alt="">
+                    <img :src="`${imgPath}${detailsList[currentClick].image}`" alt="">
                 </div>
 
             </div>
@@ -58,7 +53,7 @@ export default {
 
 <style scoped>
 #learning {
-    padding: 3rem 0;
+    padding: 8rem 0;
     border-bottom: 1px solid var(--subject-border);
 
     .options {
@@ -66,16 +61,18 @@ export default {
             list-style: none;
 
             li {
-                padding: 1rem;
-                border: 1px solid var(--subject-border);
+                padding: 1.5rem 1rem;
+                border: 1px solid var(--border-elements);
+                font-weight: bold;
+                color: var(--text-dark);
             }
         }
     }
 
     li.active {
-        background-color: var(--academy-subject);
-        color: var(--academy-primary);
-        border-left: 5px solid var(--academy-primary) !important;
+        background-color: var(--bg-light);
+        color: var(--academy-primary) !important;
+        border-left: 7px solid var(--academy-primary) !important;
     }
 
     .possibilities {
@@ -84,8 +81,15 @@ export default {
         padding: 2rem;
         position: relative;
 
+        h2 {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+
         p {
             padding-bottom: 1.5rem;
+            font-size: 1.4rem;
+            color: var(--text-dark);
         }
 
         ul {
@@ -93,6 +97,8 @@ export default {
             display: flex;
             flex-direction: column;
             gap: 1rem;
+            font-size: 1.4rem;
+            color: var(--text-dark);
 
             li::before {
                 content: "\f00c";
@@ -105,7 +111,7 @@ export default {
         img {
             width: 100px;
             position: absolute;
-            right: 0;
+            right: 2rem;
             bottom: 0;
         }
     }
