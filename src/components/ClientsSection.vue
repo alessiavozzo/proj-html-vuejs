@@ -28,7 +28,7 @@ export default {
 
 <style scoped>
 #clients {
-    padding: 3rem 0;
+    padding: 5.5rem 0;
 
     img {
         width: 100%;

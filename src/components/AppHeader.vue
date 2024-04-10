@@ -119,7 +119,7 @@ export default {
         ul {
             a {
                 text-transform: uppercase;
-                color: var(--academy-lighter)
+                color: var(--academy-lighter);
             }
         }
 

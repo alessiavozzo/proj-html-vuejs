@@ -5,6 +5,9 @@
     margin: 0;
 }
 
+/* #endregion reset */
+
+
 /* #region color-palette */
 :root {
     --academy-lighter: #FFFFFF;
@@ -19,11 +22,16 @@
     --text-dark: #808080;
     --bg-light: #FCFCFC;
     --border-elements: #EAEBEB;
+    --border-top-table: #D6F2FF;
 }
 
-
+/* #endregion color-palette */
 
 /* #region common */
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: "Rasa", sans-serif;
@@ -51,6 +59,7 @@ a {
     padding: 1rem;
 }
 
+/* #endregion common */
 
 /* #region utilities */
 .d-flex {
@@ -61,7 +70,6 @@ a {
     list-style: none;
     display: flex;
 }
-
 
 .col-8 {
     width: calc((100% / 12) * 8 - 1rem);
@@ -82,3 +90,5 @@ a {
 .col-2 {
     width: calc((100% / 12) * 2 - 1rem);
 }
+
+/* #endregion utilities */

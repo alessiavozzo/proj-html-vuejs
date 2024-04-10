@@ -61,6 +61,11 @@ export default {
                 </div>
             </div>
         </div>
+
+        <a class="go-up-btn" href="#site_header">
+            <i class="fa-solid fa-chevron-up"></i>
+            <span>TOP</span>
+        </a>
     </footer>
 </template>
 
@@ -68,12 +73,13 @@ export default {
 <style scoped>
 #site_footer {
     background-color: var(--academy-footer);
-    padding: 5rem 0 2rem 0;
+    padding: 8rem 0 0 0;
     color: var(--footer-text);
+    position: relative;
 
     .top-footer {
-        padding-bottom: 4rem;
-        border-bottom: 1px solid var(--footer-text);
+        padding-bottom: 5rem;
+        border-bottom: 1px solid var(--text-dark);
 
         .footer-column {
             flex-direction: column;
@@ -83,10 +89,10 @@ export default {
                 flex-direction: column;
                 justify-content: center;
                 align-items: flex-start;
-                gap: 1.5rem;
+                gap: 2rem;
 
                 img {
-                    height: 25px
+                    height: 27px
                 }
 
                 .contacts::before {
@@ -105,8 +111,9 @@ export default {
             }
 
             h3 {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
                 color: var(--academy-lighter);
+                font-weight: 500;
             }
 
 
@@ -118,6 +125,11 @@ export default {
 
                 a {
                     color: var(--footer-text);
+                    cursor: pointer;
+
+                    &:hover {
+                        color: var(--academy-primary);
+                    }
                 }
 
                 a.bold {
@@ -144,9 +156,10 @@ export default {
     }
 
     .bottom-footer {
-        padding: 2rem 0;
+        padding: 2.5rem 0;
         justify-content: space-between;
         align-items: center;
+        color: var(--text-dark);
 
         .socials,
         .social-links {
@@ -154,10 +167,30 @@ export default {
 
             a {
                 color: var(--footer-text);
+
+                &:hover {
+                    color: var(--academy-primary);
+                }
             }
         }
     }
 
+    .go-up-btn {
+        width: 60px;
+        height: 60px;
+        padding: 0.5rem;
+        background-color: var(--academy-primary);
+        color: var(--academy-lighter);
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
 
 }
 </style>

@@ -34,7 +34,8 @@ export default {
             </div>
 
             <!-- carousel for cards - 3 cards per page -->
-            <Carousel :itemsToShow="3" :wrapAround="true" :transition="500" :itemsToScroll="3">
+            <Carousel paginationColor="gray" paginationActiveColor="red" :itemsToShow="3" :wrapAround="true"
+                :transition="500" :itemsToScroll="3">
                 <Slide v-for="(course, index) in courses" :key="index" class="col-4">
                     <div class="card">
 
@@ -74,13 +75,13 @@ export default {
 
 <style scoped>
 #courses {
-    background-image: url(/img/background-pattern.jpg);
-    padding: 4rem 0;
+    background-image: url(/img/page-background-img.png);
+    padding: 6rem 0 9rem 0;
     border-bottom: 1px solid var(--subject-border);
 
     .container {
         flex-direction: column;
-        gap: 4rem;
+        gap: 6rem;
     }
 
     .intro {
@@ -90,6 +91,12 @@ export default {
 
         h2 {
             padding-bottom: 1rem;
+            font-size: 3.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.3rem;
         }
     }
 
@@ -115,7 +122,8 @@ export default {
                     border-radius: 20px;
                     color: var(--academy-lighter);
                     text-transform: uppercase;
-                    padding: 0.3rem 0.5rem;
+                    padding: 0.2rem 0.7rem;
+                    font-size: 0.9rem;
                 }
             }
 
@@ -135,6 +143,12 @@ export default {
                     padding-right: 0.5rem;
                 }
 
+            }
+
+            .author,
+            .description,
+            .info {
+                color: var(--text-dark);
             }
         }
     }

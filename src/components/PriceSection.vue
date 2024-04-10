@@ -31,6 +31,11 @@ export default {
     <section id="prices">
         <div class="container">
 
+            <div class="intro">
+                <h2>Pricing Plans</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus dolorum placeat illum illo.</p>
+            </div>
+
             <!-- table -->
             <table class="table">
                 <!-- thead -->
@@ -83,12 +88,27 @@ export default {
 <style scoped>
 #prices {
     background-image: url(/img/page-background-img.png);
-    padding: 4rem 0;
+    padding: 4rem 0 8rem 0;
     border-bottom: 1px solid var(--subject-border);
+
+    .intro {
+        text-align: center;
+        padding: 3rem 0 6rem 0;
+
+        h2 {
+            padding-bottom: 0.5rem;
+            font-size: 3.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.3rem;
+        }
+    }
 
     th,
     td {
-        border: 1px solid black;
+        border: 1px solid var(--border-elements);
         border-collapse: collapse;
         background-color: var(--academy-lighter);
     }
@@ -99,12 +119,27 @@ export default {
         border-collapse: collapse;
 
         thead th {
-            padding: 1.5rem;
+            padding: 2.5rem 1.5rem;
             line-height: 1.5rem;
             width: calc(100% / 4);
+            border-top: 5px solid var(--border-top-table);
+            font-size: 1.8rem;
+            font-weight: 600;
 
             &:not(:first-of-type) {
                 background-color: var(--academy-subject);
+
+                >img,
+                .plan,
+                .price {
+                    padding-bottom: 1rem;
+                }
+            }
+
+            &:first-of-type {
+                text-align: left;
+                vertical-align: bottom;
+                line-height: 2rem;
             }
 
             &.active {
@@ -113,10 +148,12 @@ export default {
         }
 
         tbody {
+            font-size: 1.3rem;
+            color: var(--text-dark);
 
             th,
             td {
-                padding: 1.5rem;
+                padding: 1rem;
             }
 
             th {
@@ -131,14 +168,20 @@ export default {
 
                 >td {
                     background-color: var(--academy-subject);
+                    padding: 1.8rem 0;
 
                     .btn {
-                        border: 1px solid black;
+                        border: 1px solid var(--border-elements);
                         background-color: var(--academy-lighter);
+                        color: var(--text-dark);
+                        font-size: 1.1rem;
+                        font-weight: 600;
+                        padding: 1rem 2rem;
 
                         &.activeBtn {
                             background-color: var(--academy-primary);
                             color: var(--academy-lighter);
+                            border-color: var(--academy-primary);
                         }
                     }
                 }
@@ -147,6 +190,7 @@ export default {
 
             td {
                 text-align: center;
+                font-size: 1.6rem;
             }
         }
     }
