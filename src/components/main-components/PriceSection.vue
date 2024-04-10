@@ -101,7 +101,7 @@ export default {
     background-image: url(/img/page-background-img.png);
     background-position-y: center;
     padding: 4rem 0 8rem 0;
-    border-bottom: 1px solid var(--subject-border);
+    border-bottom: 1px solid var(--border-elements);
 
     .intro {
         text-align: center;

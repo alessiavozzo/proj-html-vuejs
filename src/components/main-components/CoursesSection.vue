@@ -1,6 +1,6 @@
 <script>
 import { courses } from '../../assets/js/courses';
-import 'vue3-carousel/dist/carousel.css';
+
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 
 export default {
@@ -76,8 +76,8 @@ export default {
 <style scoped>
 #courses {
     background-image: url(/img/page-background-img.png);
-    padding: 6rem 0 9rem 0;
-    border-bottom: 1px solid var(--subject-border);
+    padding: 6rem 0 6.5rem 0;
+    border-bottom: 1px solid var(--border-elements);
 
     .container {
         flex-direction: column;
