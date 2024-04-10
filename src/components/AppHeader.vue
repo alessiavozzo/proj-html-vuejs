@@ -101,7 +101,6 @@ export default {
 
 <style scoped>
 #site_header {
-    /* background-image: url(/img/h5-slide-3-background.jpg); */
     height: 680px;
     background-size: cover;
     background-position: center;
@@ -158,6 +157,7 @@ export default {
         width: 70%;
         gap: 1rem;
         color: var(--academy-lighter);
+        max-width: 1200px;
 
         h1 {
             font-size: 5rem;

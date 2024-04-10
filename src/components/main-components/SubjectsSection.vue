@@ -38,6 +38,12 @@ export default {
         flex-direction: column;
         gap: 1.5rem;
         background-color: var(--academy-subject);
+        transition: all 0.3s;
+
+        &:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
     }
 }
 </style>

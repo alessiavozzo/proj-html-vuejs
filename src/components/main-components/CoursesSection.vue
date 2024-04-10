@@ -34,8 +34,7 @@ export default {
             </div>
 
             <!-- carousel for cards - 3 cards per page -->
-            <Carousel paginationColor="gray" paginationActiveColor="red" :itemsToShow="3" :wrapAround="true"
-                :transition="500" :itemsToScroll="3">
+            <Carousel :itemsToShow="3" :wrapAround="true" :transition="500" :itemsToScroll="3">
                 <Slide v-for="(course, index) in courses" :key="index" class="col-4">
                     <div class="card">
 
@@ -75,9 +74,10 @@ export default {
 
 <style scoped>
 #courses {
-    background-image: url(/img/page-background-img.png);
+    background-image: url(/img/background-pattern.jpg);
     padding: 6rem 0 6.5rem 0;
     border-bottom: 1px solid var(--border-elements);
+    background-position-y: 50%;
 
     .container {
         flex-direction: column;

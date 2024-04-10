@@ -33,7 +33,8 @@ export default {
                         <!-- other cols -->
                         <ul v-if="col.links">
                             <li v-for="link in col.links">
-                                <a :href="link.href" :class="{ bold: link.name }">{{ link.name || link.text }}</a>
+                                <a :href="link.href" target="_blank" :class="{ bold: link.name }">{{ link.name ||
+                                    link.text }}</a>
                                 <div v-if="link.author">{{ link.author }}</div>
                             </li>
                         </ul>
@@ -62,6 +63,7 @@ export default {
             </div>
         </div>
 
+        <!-- scroll up -->
         <a class="go-up-btn" href="#site_header">
             <i class="fa-solid fa-chevron-up"></i>
             <span>TOP</span>

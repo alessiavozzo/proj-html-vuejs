@@ -98,8 +98,8 @@ export default {
 
 <style scoped>
 #prices {
-    background-image: url(/img/page-background-img.png);
-    background-position-y: center;
+    background-image: url(/img/background-pattern.jpg);
+    background-position-y: 180%;
     padding: 4rem 0 8rem 0;
     border-bottom: 1px solid var(--border-elements);
 
@@ -197,6 +197,11 @@ export default {
                             font-size: 1.1rem;
                             font-weight: 600;
                             padding: 1rem 2rem;
+
+                            &:hover {
+                                background-color: var(--academy-primary);
+                                color: var(--academy-lighter);
+                            }
 
                             &.activeBtn {
                                 background-color: var(--academy-primary);
