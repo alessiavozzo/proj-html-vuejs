@@ -73,6 +73,7 @@ export default {
         width: 70%;
         text-align: center;
         color: var(--academy-lighter);
+        max-width: 1200px;
 
         .feed {
             padding: 1rem 0;
@@ -97,6 +98,11 @@ export default {
             background-color: transparent;
             color: var(--fade-light);
             font-size: 5rem;
+            cursor: pointer;
+
+            &:hover {
+                color: var(--academy-lighter);
+            }
         }
     }
 
@@ -111,6 +117,7 @@ export default {
 
         i {
             color: var(--fade-light);
+            cursor: pointer;
 
             &.active {
                 color: var(--academy-lighter);

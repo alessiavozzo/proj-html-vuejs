@@ -58,7 +58,7 @@ export default {
                 <div class="nav-links">
                     <ul class="list-inline">
                         <li v-for="navLink in navLinks">
-                            <a :href="navLink.href">{{ navLink.link }}</a>
+                            <a :href="navLink.href" target="_blank">{{ navLink.link }}</a>
                         </li>
                     </ul>
                 </div>
@@ -84,7 +84,7 @@ export default {
                 <h1>Contemporary Ideas</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit cumque dignissimos qui quasi
                     praesentium a, maxime neque adipisci perspiciatis recusandae?</p>
-                <a href="#" class="btn">Register now</a>
+                <a href="#" target="_blank" class="btn">Register now</a>
             </div>
 
             <div class="thumbnail">
@@ -190,6 +190,11 @@ export default {
             background-color: transparent;
             color: var(--fade-light);
             font-size: 5rem;
+            cursor: pointer;
+
+            &:hover {
+                color: var(--academy-lighter);
+            }
         }
     }
 
@@ -202,8 +207,10 @@ export default {
         gap: 0.5rem;
         justify-content: center;
 
+
         i {
             color: var(--fade-light);
+            cursor: pointer;
 
             &.active {
                 color: var(--academy-lighter);

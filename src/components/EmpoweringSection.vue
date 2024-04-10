@@ -10,7 +10,7 @@ export default {
         return {
             sectionData: {
                 title: "Empowering Children to Reach Their Potential",
-                paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis fugit fugiat voluptatem eum cum minus similique ex natus distinctio est in maxime ipsa dolores ratione quas quis vero, sint quia eius.",
+                paragraph: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis fugit fugiat voluptatem eum cum minus similique ex natus distinctio est in maxime ipsa dolores ratione quas quis vero, sint quia eius. Distinctio est in maxime ipsa dolores ratione quas.",
                 imagePath: "h5-img-2.jpg",
                 feeds: {
                     stories: "User stories",
