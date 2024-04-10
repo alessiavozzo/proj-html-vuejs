@@ -1,5 +1,5 @@
 <script>
-import { courses } from '../assets/js/courses';
+import { courses } from '../../assets/js/courses';
 import 'vue3-carousel/dist/carousel.css';
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 
@@ -103,6 +103,15 @@ export default {
     .card {
         border: 1px solid var(--subject-border);
         margin: 0 1rem;
+        background-color: var(--academy-lighter);
+
+        &:has(h3:hover) {
+            border: 1px solid var(--academy-primary);
+        }
+
+        h3 {
+            cursor: pointer;
+        }
 
         img {
             width: 100%;

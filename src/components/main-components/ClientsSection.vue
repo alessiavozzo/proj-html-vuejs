@@ -1,5 +1,5 @@
 <script>
-import { clients } from '../assets/js/clients';
+import { clients } from '../../assets/js/clients';
 
 export default {
     name: "ClientsSection",

@@ -1,5 +1,5 @@
 <script>
-import { pricePlansData } from '../assets/js/price-plans';
+import { pricePlansData } from '../../assets/js/price-plans';
 
 export default {
     name: "PriceSection",

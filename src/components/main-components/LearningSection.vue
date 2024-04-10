@@ -1,6 +1,6 @@
 <script>
-import { options } from '../assets/js/details';
-import { detailsList } from '../assets/js/details';
+import { options } from '../../assets/js/details';
+import { detailsList } from '../../assets/js/details';
 
 export default {
     name: "LearningSection",

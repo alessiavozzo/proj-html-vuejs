@@ -1,5 +1,5 @@
 <script>
-import { subjects } from '../assets/js/subjects';
+import { subjects } from '../../assets/js/subjects';
 
 export default {
     name: "SubjectSection",

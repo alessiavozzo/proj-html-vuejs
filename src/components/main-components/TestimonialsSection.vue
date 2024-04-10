@@ -1,5 +1,5 @@
 <script>
-import { testimonials } from '../assets/js/testimonials'
+import { testimonials } from '../../assets/js/testimonials'
 
 export default {
     name: "TestimonialsSection",
